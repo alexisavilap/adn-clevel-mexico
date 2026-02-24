@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-offwhite text-navy font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: #f8d43d;
+    color: #21325e;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #21325e;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #f8d43d;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* Satoshi font weights */
+  .font-medium { font-weight: 500; }
+  .font-bold   { font-weight: 700; }
+  .font-black  { font-weight: 700; } /* Satoshi max es 700 */
+}
